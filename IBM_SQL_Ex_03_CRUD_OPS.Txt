@@ -1,0 +1,83 @@
+Exercise - 03: CRUD OPS
+==============================================================================
+
+-- Create the Departments table
+CREATE TABLE Departments (
+    DepartmentID INT PRIMARY KEY,
+    DepartmentName VARCHAR(100),
+    Location VARCHAR(100)
+);
+
+-- Insert sample records into the Departments table
+INSERT INTO Departments (DepartmentID, DepartmentName, Location)
+VALUES
+    (101, 'HR', 'New York'),
+    (102, 'Sales', 'Chicago'),
+    (103, 'Engineering', 'San Francisco'),
+    (104, 'Marketing', 'Los Angeles');
+
+-- Create the Employees table
+CREATE TABLE Employees (
+    EmployeeID INT PRIMARY KEY,
+    FirstName VARCHAR(50),
+    LastName VARCHAR(50),
+    Salary DECIMAL(10, 2),
+    DepartmentID INT
+);
+
+-- Insert sample records into the Employees table
+INSERT INTO Employees (EmployeeID, FirstName, LastName, Salary, DepartmentID)
+VALUES
+    (1, 'Alice', 'Smith', 55000.00, 101),
+    (2, 'Bob', 'Johnson', 60000.00, 102),
+    (3, 'Charlie', 'Brown', 62000.00, 101),
+    (4, 'David', 'Davis', 58000.00, 103),
+    (5, 'Eve', 'White', 54000.00, 102),
+    (6, 'Frank', 'Lee', 57000.00, 101);
+
+
+
+Task Qs:
+========
+
+Task 1: Retrieve Employee Information
+
+  Retrieve all columns from the Employees table.
+  Retrieve only the first and last names of employees along with their salaries.
+  Retrieve employees who earn more than $55,000.
+
+
+
+Task 2: Retrieve Department Information
+  Retrieve all columns from the Departments table.
+  Retrieve only the department names and their locations.
+
+
+
+Task 3: Employee and Department Information
+  Create a query that shows which employee works in which department, including department names.
+  List all employees who work in the "HR" department.
+
+
+
+Task 4: Aggregation and Calculation
+
+  Calculate the average salary of employees.
+  Calculate the total salary expenses for each department.
+
+
+Task 5: Updating Data
+
+  Increase the salary of employees in the "Sales" department by 10%.
+
+
+
+Task 6: Inserting Data
+
+  Add a new employee, Sarah Johnson, with a salary of $60,000, and assign them a unique EmployeeID.
+
+
+Task 7: Deleting Data
+
+  Delete the record of employee Frank Lee.
+  
