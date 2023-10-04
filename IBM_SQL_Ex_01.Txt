@@ -1,0 +1,98 @@
+
+Exercise - 01 : CRUD Operations
+==============================================================================
+
+-- Create the Students table
+CREATE TABLE Students (
+    StudentID INT PRIMARY KEY,
+    FirstName VARCHAR(50),
+    LastName VARCHAR(50),
+    Age INT,
+    Gender VARCHAR(10)
+);
+
+-- Insert sample records into the Students table
+INSERT INTO Students (StudentID, FirstName, LastName, Age, Gender)
+VALUES
+    (1, 'Alice', 'Smith', 20, 'Female'),
+    (2, 'Bob', 'Johnson', 22, 'Male'),
+    (3, 'Charlie', 'Brown', 21, 'Male'),
+    (4, 'David', 'Davis', 23, 'Male'),
+    (5, 'Eve', 'White', 20, 'Female');
+
+-- Create the Courses table
+CREATE TABLE Courses (
+    CourseID INT PRIMARY KEY,
+    CourseName VARCHAR(100),
+    Instructor VARCHAR(100)
+);
+
+-- Insert sample records into the Courses table
+INSERT INTO Courses (CourseID, CourseName, Instructor)
+VALUES
+    (101, 'Mathematics', 'Prof. X'),
+    (102, 'History', 'Prof. Y'),
+    (103, 'Biology', 'Prof. Z'),
+    (104, 'Chemistry', 'Prof. W'),
+    (105, 'Computer Sci', 'Prof. V');
+
+
+-- Create the Enrollments table
+CREATE TABLE Enrollments (
+    StudentID INT,
+    CourseID INT
+);
+
+
+-- Insert sample records into the Enrollments table
+INSERT INTO Enrollments (StudentID, CourseID)
+VALUES (1, 101), (2, 101), (3, 102), (4, 103), (5, 104);
+
+
+======================================================================================
+
+Qs for SQL Queries:
+===================
+
+SQL Queries
+
+Task 1: Retrieve Student Information
+
+    Retrieve all columns from the Students table.
+    Retrieve only the first and last names of students.
+    Retrieve students who are 20 years old.
+
+
+
+Task 2: Retrieve Course Information
+
+    Retrieve all columns from the Courses table.
+    Retrieve only the course names.
+
+
+
+Task 3: Enrollment Information
+
+    Create a query that shows which student is enrolled in which course.
+    List all students who are not enrolled in any course.
+
+
+Task 4: Aggregation and Counting
+
+    Count the number of students in the Students table.
+    Count how many students are enrolled in each course.
+
+
+Task 5: Updating Data
+ 
+    Change the age of student Alice Smith to 21.
+
+
+Task 6: Inserting Data
+
+    Add a new student, Frank Johnson, aged 19, and assign them a unique StudentID.
+  
+
+Task 7: Deleting Data
+
+    Delete the record of student David Davis.
